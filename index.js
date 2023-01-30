@@ -34,7 +34,7 @@ app.listen(port, () => {
 // routes
 app.use("/api", allRoutes);
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public");
+  res.send("Welcome");
 });
 app.all("*", (req, res) => {
   res.send("No route found.");
