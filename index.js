@@ -14,7 +14,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // db connection
-mongoose.connect(process.env.DATABASE_LOCAL, {
+mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

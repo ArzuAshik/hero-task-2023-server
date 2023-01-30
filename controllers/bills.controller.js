@@ -2,7 +2,6 @@ const { Bill } = require("../models/Bill");
 
 exports.getAllBills = async (req, res, next) => {
   let { page = "1", limit = "10", search = "" } = req.query;
-  console.log(search);
   page = Number(page);
   limit = Number(limit);
   const query = {
