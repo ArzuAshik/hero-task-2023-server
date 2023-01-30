@@ -15,7 +15,7 @@ exports.getAllBills = async (req, res, next) => {
 
   try {
     const data = await Bill.find(query)
-      .sort()
+      .sort({createdAt: -1})
       .skip((Number(page) - 1) * Number(limit))
       .limit(Number(limit));
 
